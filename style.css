@@ -1,0 +1,97 @@
+/* Style the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f8f5; /* Change background color as needed */
+    border-bottom: 1px solid black;
+    padding: 20px;
+}
+
+.navbar-brand {
+    font-size: 24px; /* Adjust font size as needed */
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(49, 80, 65);
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-item {
+    margin-left: 20px; /* Adjust spacing between navigation items */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #405044; /* Change link color as needed */
+    font-size: 18px; /* Adjust font size as needed */
+    padding: 20px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        position: static;
+        margin-top: 20px; /* Adjust margin as needed */
+    }
+
+    .nav-item {
+        margin-left: 0; /* Reset margin for responsiveness */
+        margin-top: 10px; /* Adjust margin as needed */
+    }
+}
+
+/* Style the background image */
+.bgimage {
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Hide overflow to ensure the image stays within the circle */
+}
+
+.bgimage:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 500px; /* Adjust the width of the circular border */
+    height: 500px; /* Adjust the height of the circular border */
+    background-image: url('images/headshot.jpeg'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the circular area */
+    background-position: center; /* Center the image within the circular area */
+    border: 2px solid #375641; /* Adjust border properties as needed */
+    border-radius: 50%; /* Create a circular border */
+    z-index: -1;
+}
+
+/* Text CSS above hero image */
+.hero_title {
+    font-size: 4.5rem;
+}
+
+.hero_desc {
+    font-size: 2rem;
+}
+
+.hero-text {
+    text-align: center; /* Center the text horizontally */
+    position: absolute;
+    top: 50%; /* Align the text vertically to the center */
+    left: 20px; /* Adjust the left position */
+    transform: translateY(-50%); /* Center the text vertically */
+    color: rgb(17, 13, 13);
+}
